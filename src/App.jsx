@@ -5,10 +5,13 @@ import ReviewHome from "./tutorial 1 john smilga 2020 projects/project 3 reviews
 import Project4Home from "./tutorial 1 john smilga 2020 projects/project 4 accordion/Project4Home";
 import MenuHome from "./tutorial 1 john smilga 2020 projects/project 5 menu/MenuHome";
 import TabsHome from "./tutorial 1 john smilga 2020 projects/project 6 tabs/TabsHome";
+import SliderHome from "./tutorial 1 john smilga 2020 projects/project 7 slider/SliderHome";
+import ParaHome from "./tutorial 1 john smilga 2020 projects/project 8 paragraph generator/ParaHome";
+import ColorHome from "./tutorial 1 john smilga 2020 projects/project 9 color generator/ColorHome";
 function App() {
   return (
     <>
-      <MenuHome />
+      <ColorHome />
     </>
   );
 }
