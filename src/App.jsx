@@ -8,10 +8,12 @@ import TabsHome from "./tutorial 1 john smilga 2020 projects/project 6 tabs/Tabs
 import SliderHome from "./tutorial 1 john smilga 2020 projects/project 7 slider/SliderHome";
 import ParaHome from "./tutorial 1 john smilga 2020 projects/project 8 paragraph generator/ParaHome";
 import ColorHome from "./tutorial 1 john smilga 2020 projects/project 9 color generator/ColorHome";
+import GroceryHome from "./tutorial 1 john smilga 2020 projects/project 10 grocery bud/GroceryHome";
+import NavbarHome from "./tutorial 1 john smilga 2020 projects/project 11 navbar/NavbarHome";
 function App() {
   return (
     <>
-      <ColorHome />
+      <NavbarHome />
     </>
   );
 }
