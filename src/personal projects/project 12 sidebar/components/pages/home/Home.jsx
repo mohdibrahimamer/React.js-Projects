@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
-
+import { IoMdMenu } from "react-icons/io";
 const Home = () => {
-    const [showModal, setShowModal] = useState(true)
+    const [show, setShow] = useState(false)
     // yaha per handle click ki funtinality likhre
     const handleClick = () => {
         console.log('modal clicked')
-        if (!showModal) {
-            setShowModal(false)
-        }
-
+        setShow(!show)
 
     }
     return (
@@ -17,18 +14,20 @@ const Home = () => {
 
             <div className="modal">
                 <button type='button' onClick={handleClick} > show modal </button>
-                {showModal && <ModalContent showModal={showModal} />}
+                {show && <ShowModal />}
             </div>
         </>
     )
 }
 
-// yaha modal content ka component banarey
-const ModalContent = ({ showModal }) => {
+
+const ShowModal = () => {
     return (
         <>
-            <div>modal content hai </div>
-            <p>{showModal}</p>
+            <div className="modal">
+                <h1>modal</h1>
+                <p>this is a modal that contains various content</p>
+            </div>
         </>
     )
 }

@@ -4,15 +4,18 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { IoMdMenu } from "react-icons/io";
 
 const Sidebar = () => {
+
     return (
         <>
-            <div>Sidebar</div>
-
             <nav>
                 <ul>
                     <div className="left-logo">
+                        <button type='button'>
+                            <IoMdMenu />
+                        </button>
                         <p>coding addict</p>
                     </div>
                     <li>
