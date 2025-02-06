@@ -9,6 +9,13 @@ const AppProvider = ({ children }) => {
     // yaha per 2 useState dalrey 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
+    // yaha per location k liye useState create karey
+    const [location, setLocation] = useState({})
+
+    // yaha per page k liye  useState create karey
+    const [page, setPage] = useState({ page: '', links: [] })
+
+
 
     // yaha per "opensidebar" ka function likhre
     const openSidebar = () => {
@@ -23,7 +30,13 @@ const AppProvider = ({ children }) => {
     }
 
     //    yaha per "open submenu" ka function likhre
-    const openSubMenu = () => {
+    // yaha per text aur coordinates as a parameter pass karey
+    const openSubMenu = (text, coordinates) => {
+        // yaha per newpage variable create karey
+        const newPage = SubLinks.find((link) => link.page === text)
+        console.log(newPage)
+        setPage(newPage)
+        setLocation(coordinates)
         setIsSubMenuOpen(true)
 
     }
@@ -33,7 +46,7 @@ const AppProvider = ({ children }) => {
         setIsSubMenuOpen(false)
 
     }
-    return <AppContext.Provider value={{ isSidebarOpen, isSubMenuOpen, openSidebar, closeSidebar, openSubMenu, closeSubMenu }}>
+    return <AppContext.Provider value={{ isSidebarOpen, isSubMenuOpen, openSidebar, closeSidebar, openSubMenu, closeSubMenu, location, page }}>
         {children}
     </AppContext.Provider>
 }

@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <>
             <div>Hero</div>
-            <div className="image">
+            <div className="image" onMouseOver={closeSubMenu}>
                 <img src={Person1Image} alt="person1" width={"100px"} />
                 <div className="info">
                     <h1>copied from stripe home page and style it accor</h1>

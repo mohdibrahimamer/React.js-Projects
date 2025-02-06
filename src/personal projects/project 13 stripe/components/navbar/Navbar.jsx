@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from '../../context/Context';
 import { MdMenu } from "react-icons/md";
 const Navbar = () => {
-    const { openSidebar, openSubMenu, CloseSubMenu } = useGlobalContext()
+    const { openSidebar, openSubMenu, closeSubMenu } = useGlobalContext()
 
 
     // yaha per display submenu ki functionality likhre
@@ -20,18 +20,20 @@ const Navbar = () => {
         openSubMenu(page, { center, bottom })
 
     }
+
+    // yaha per handleSubmenu ki funtinality likhre
+    const handleSubmenu = (e) => {
+        if (!e.target.classList.contains('responsive-links')) {
+            closeSubMenu()
+        }
+    }
     return (
         <>
-            <nav>
+            <nav onMouseOver={handleSubmenu}>
                 <ul>
                     <div className="left-logo">
 
                         <p>Stripe </p>
-                        <h1>continue from stripe location </h1>
-                        <h1>continue from stripe location </h1>
-                        <h1>continue from stripe location </h1>
-                        <h1>continue from stripe location </h1>
-
 
                         <div className="responsive">
                             {/* yeh responsiveness mien add karo or iski css likho */}
