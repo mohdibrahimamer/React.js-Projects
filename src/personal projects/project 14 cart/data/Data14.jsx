@@ -9,7 +9,7 @@ export default [
         title: "Samsung Galaxy S7",
         img: phone1Image,
         price: 399,
-        quantity: 1,
+        amount: 1,
         company: "samsung",
         info:
             "Lorem ipsum dolor amet offal bitters ethical dolor thundercats labore wehteerparty.",
@@ -20,7 +20,7 @@ export default [
         title: "google pixel 7",
         img: phone2Image,
         price: 499,
-        quantity: 1,
+        amount: 1,
 
         company: "google pixel 7",
         info:
@@ -32,7 +32,7 @@ export default [
         title: "google pixel 7",
         img: phone3Image,
         price: 499,
-        quantity: 1,
+        amount: 1,
 
         company: "google pixel 7",
         info:
@@ -44,7 +44,7 @@ export default [
         title: "Xaomi note 7 pro",
         img: phone4Image,
         price: 499,
-        quantity: 1,
+        amount: 1,
 
         company: "Xaomi",
         info:
@@ -57,7 +57,7 @@ export default [
         title: "samsung galaxy s8",
         img: phone5Image,
         price: 599,
-        quantity: 1,
+        amount: 1,
 
         company: "samsung galaxy s8",
         info:

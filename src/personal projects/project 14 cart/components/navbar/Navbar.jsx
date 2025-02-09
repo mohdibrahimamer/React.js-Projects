@@ -1,7 +1,10 @@
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import { useGlobalContext } from "../../context/Context";
 const Navbar = () => {
+    const { amount } = useGlobalContext();
+
+
     return (
         <nav>
             <div className="nav-center">
@@ -11,7 +14,7 @@ const Navbar = () => {
                 <div className="nav-header">
                     <Link to="/cart">
                         <FaShoppingBag className="cart-icon" />
-                        <span className="cart-total">0</span>
+                        <span className="cart-total">amount={amount}</span>
                     </Link>
                 </div>
             </div>

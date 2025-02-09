@@ -1,12 +1,9 @@
 import React from 'react'
 import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
-const SingleCart = ({ id, title, price, quantity, img, info, company, removeItem, IncreaseItem }) => {
+import { useGlobalContext } from '../../context/Context';
+const SingleCart = ({ id, title, price, img, info, company }) => {
+    const { removeItem, amount, increase, decrease } = useGlobalContext();
 
-
-    const DecreaseItem = () => {
-
-
-    }
     return (
         <>
             <div>SingleCart</div>
@@ -23,11 +20,11 @@ const SingleCart = ({ id, title, price, quantity, img, info, company, removeItem
                     <p> info= {info}</p>
                     <p> company={company}</p>
                     <div className="btn-containers">
-                        <button type='button' onClick={IncreaseItem}>
+                        <button type='button' onClick={() => increase(id)}>
                             <FaArrowAltCircleUp />
                         </button>
-                        <p>quantity={quantity}</p>
-                        <button type='button'>
+                        <p>amount={amount}</p>
+                        <button type='button' onClick={() => decrease(id)}>
                             <FaArrowAltCircleDown />
                         </button>
                     </div>
