@@ -1,10 +1,11 @@
-import SidebarHome from "./personal projects/project 12 sidebar/SidebarHome";
-import StripeHome from "./personal projects/project 13 stripe/StripeHome";
+import React from "react";
+import Project15Home from "./personal projects/project 15/Project15Home";
 import CartHome from "./personal projects/project 14 cart/CartHome";
+import Sidebar from "./personal projects/project 15/component/sidebar/sidebar";
 function App() {
   return (
     <>
-      <CartHome />
+      <Project15Home />
     </>
   );
 }
