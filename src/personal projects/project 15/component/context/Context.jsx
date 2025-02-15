@@ -17,7 +17,6 @@ const AppProvider = ({ children }) => {
             // yaha per data aur search term ko ek sath dalrey 
             const response = await fetch(`${url} ${searchTerm}`)
             const data = await response.json()
-            console.log('your data is', data)
             setCocktails(data);
             // yaha per api k data mien se ara drinks bol k object hai 
             const { drinks } = data;

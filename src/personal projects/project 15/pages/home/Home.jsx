@@ -6,7 +6,6 @@ import CocktailsList from '../../component/cocktail-list/CocktailsList';
 import { useGlobalContext } from '../../component/context/Context';
 const Home = () => {
     const searchValue = useRef(null)
-    console.log(searchValue)
     useEffect(() => {
         searchValue.current.focus();
     }, [])
